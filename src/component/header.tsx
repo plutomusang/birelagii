@@ -9,13 +9,14 @@ import { IloginState } from "../page/login";
 
 export interface IHeaderProps {
     logout:()=>{} |void
+    onWorkBench:()=>{} |void
     onSession: boolean
 }
 
 
 export const HeaderAB: React.FC<IHeaderProps> =(props) => {
     const navigate = useNavigate();
-    
+    const [chkAdd, chkAddSet] = useState(false);
     const onLogOut =()=>{
         document.cookie = 'none';
         const o = document.cookie;  
@@ -47,6 +48,11 @@ export const HeaderAB: React.FC<IHeaderProps> =(props) => {
             return false;
         }
         return true;
+    }
+    const onWorkbench =()=> {
+        // alert('workbench');
+        chkAddSet(false);
+        props.onWorkBench();
     }    
     const [loginstate, setLogin] = useState(getCookie());
     const CheckLoginState =() => {
@@ -63,16 +69,19 @@ export const HeaderAB: React.FC<IHeaderProps> =(props) => {
             return (<></>);
         }
     }
+    const onLabelClicked =()=> {
+        chkAddSet(!chkAdd);
+    }
     useEffect(()=>{
         setLogin(getCookie());
       },[props]);
     return (
         <header className="headerclass">
             <div className="headerContainer">
-                <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+                <input type="checkbox" id="nav-toggle" className="nav-toggle" checked={chkAdd}/>
                 
                 <label htmlFor="nav-toggle" className = "nav-toggle-label"> 
-                <span className="label-span"></span> 
+                <span onClick={onLabelClicked}  className="label-span"></span> 
                 </label>
 
                 <div className="logo">

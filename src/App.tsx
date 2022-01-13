@@ -19,12 +19,17 @@ function App() {
   const [session, setSession] = useState(false);
   const [hp, setHP] = useState<IHeaderProps>({
     logout: onLogout,
+    onWorkBench: onWorkbenchOpen,
     onSession: false
   })
+
+
   interface IisLogin {
     onlogin:()=>{} |void
 }
   const IsLogin: React.FC<IisLogin> =(isprops)=>{
+
+
 
     let o = document.cookie + '';  
     logger.info(document.cookie);
@@ -51,19 +56,23 @@ function App() {
     
 
   }
+  function onWorkbenchOpen() {
+    // alert('wb');
+  }
   function onLogout (){
     setSession(false);
   }
   function onLogIn (){
     setSession(true);
   }
-  useEffect(()=>{
+
+  useEffect(()=>{    
     // let navigate = useNavigate();
     // navigate("login");
   },[]);
   return (    
     <div className="App">
-        <HeaderAB logout={onLogout} onSession={session} />
+        <HeaderAB logout={onLogout} onSession={session} onWorkBench={onWorkbenchOpen}/>
         <IsLogin onlogin={onLogIn}/>
         {/* <Outlet/> */}
 

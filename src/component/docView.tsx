@@ -85,9 +85,9 @@ export const DocView = ({boom} : {boom: React.Dispatch<React.SetStateAction<IDoc
                             <div key={values.DocumentTrackID} className="recordlist" onClick ={() => router(values.DocumentTrackID)}>
                                 <div ><img className="docIcon" src={iconSmall(values.picIndex)} alt="" /> </div>
                                 <div className="fld"> {values.taxPayerName}</div>
-                                <div className="fld">{values.Subject }</div>
+                                {/* <div className="fld">{values.Subject }</div> */}
                                 <div className="fld">{values.personName }</div>
-                                <div className="fld">{values.NoDays}</div>           
+                                {/* <div className="fld">{values.NoDays}</div>            */}
                             </div>  
                         )
                     })}   
@@ -101,9 +101,9 @@ export const DocView = ({boom} : {boom: React.Dispatch<React.SetStateAction<IDoc
                             <div key={values.DocumentTrackID} className="recordlist" onClick ={() => router(values.DocumentTrackID)}>
                                 <div ><img className="docIcon" src={iconSmall(values.picIndex)} alt="" /> </div>
                                 <div className="fld"> {values.taxPayerName}</div>
-                                <div className="fld">{values.Subject }</div>
+                                {/* <div className="fld">{values.Subject }</div> */}
                                 <div className="fld">{values.personName }</div>
-                                <div className="fld">{values.NoDays}</div>           
+                                {/* <div className="fld">{values.NoDays}</div>            */}
                             </div>  
                         )
                     })}                    
@@ -115,9 +115,9 @@ export const DocView = ({boom} : {boom: React.Dispatch<React.SetStateAction<IDoc
                             <div key={values.DocumentTrackID} className="recordlist" onClick ={() => router(values.DocumentTrackID)}>
                                 <div ><img className="docIcon" src={iconSmall(values.picIndex)} alt="" /> </div>
                                 <div className="fld"> {values.taxPayerName}</div>
-                                <div className="fld">{values.Subject}</div>
+                                {/* <div className="fld">{values.Subject}</div> */}
                                 <div className="fld">{values.personName }</div>
-                                <div className="fld">{values.NoDays}</div>           
+                                {/* <div className="fld">{values.NoDays}</div>            */}
                             </div>  
                         )
                     })} 

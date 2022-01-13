@@ -17,6 +17,10 @@ import {IRouters } from '../typescript/interface_routers';
 import logger from "../config/logger";
 import Popup from "../component/popup";
 import IpopUp from "../typescript/interface_popup"
+import ReactNotification from 'react-notifications-component';
+import { store } from 'react-notifications-component';
+import "animate.css";
+import 'react-notifications-component/dist/theme.css';
 
 const WorkBench =()=> {
 
@@ -64,6 +68,21 @@ const WorkBench =()=> {
   }
 
   // logger.info('workbench has rendered');
+  const DisplayNotification =() => {
+    store.addNotification({
+      title: "Wonderful!",
+      message: "teodosii@react-notifications-component",
+      type: "success",
+      insert: "top",
+      container: "top-right",
+      animationIn: ["animate__animated", "animate__fadeIn"],
+      animationOut: ["animate__animated", "animate__fadeOut"],
+      dismiss: {
+        duration: 10000,
+        onScreen: true
+      }
+    })
+  }
 
   function deleteDocument(ok:boolean, recId:number) {
     let id = recId;
@@ -254,12 +273,16 @@ useEffect(() => {
   return (
     <routerContext.Provider value = {routers}>
       <NavigationContext.Provider value = {navigation} >
+        <ReactNotification />
+        {/* <button onClick={DisplayNotification}>default</button> */}
         <Popup {...popUpClass}/>
         <ToolBar />
+        
         <DocViewContext.Provider value={documentView}>            
           <TimelineContext.Provider value ={TimelineData}>
             
               {/* <ContentAB /> */}
+              
               <IfContent />
           </TimelineContext.Provider>
         </DocViewContext.Provider>
