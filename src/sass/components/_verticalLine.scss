@@ -1,0 +1,12 @@
+@use'../abstracts' as *;
+
+.vliner-container{
+  display:grid;
+  place-items:center;
+}
+.vliner {
+  min-height:50px;
+  height:100%;
+  width: $em-vliner;
+  background: $clr-hot;
+}

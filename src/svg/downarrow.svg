@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="5.2916mm" height="5.2916mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 529.16 529.16"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+    .str0 {stroke:aqua;stroke-width:7.62;stroke-miterlimit:22.9256}
+    .str1 {stroke:white;stroke-width:7.62;stroke-miterlimit:22.9256}
+    .fil0 {fill:aqua}
+    .fil1 {fill:white}
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0 str0" cx="264.58" cy="264.58" r="221.59"/>
+  <circle class="fil1 str0" cx="264.58" cy="264.58" r="184.42"/>
+  <rect class="fil0 str0" transform="matrix(0.707107 0.707107 -0.707107 0.707107 264.58 162.259)" width="144.69" height="144.69"/>
+  <rect class="fil1 str1" transform="matrix(0.707107 0.707107 -0.707107 0.707107 264.58 119.269)" width="144.69" height="144.69"/>
+ </g>
+</svg>

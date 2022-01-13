@@ -1,0 +1,10 @@
+{
+    "Header": "spLogin",
+    "Set1": [
+        {
+            "LoginStatus": "Success",
+            "Name": "Administrator",
+            "id": 1
+        }
+    ]
+}

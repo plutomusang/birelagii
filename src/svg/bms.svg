@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="18.5208mm" height="18.5208mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1852.08 1852.08"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+    .str1 {stroke:black;stroke-width:20;stroke-miterlimit:22.9256}
+    .str0 {stroke:#FFD014;stroke-width:20;stroke-miterlimit:22.9256}
+    .fil4 {fill:none}
+    .fil2 {fill:black}
+    .fil5 {fill:#1497D4}
+    .fil1 {fill:#20BCD4}
+    .fil0 {fill:#FFD014}
+    .fil3 {fill:#FFD014}
+    .fil6 {fill:#FFD118}
+    .fil7 {fill:white}
+  </style>
+   <clipPath id="id0">
+    <path d="M926.05 370.49c306.82,0 555.55,248.73 555.55,555.55 0,306.83 -248.73,555.56 -555.55,555.56 -306.83,0 -555.56,-248.73 -555.56,-555.56 0,-306.82 248.73,-555.55 555.56,-555.55z"/>
+   </clipPath>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0 str0" cx="926.04" cy="926.04" r="767.29"/>
+  <circle class="fil1" cx="926.05" cy="926.04" r="697.61"/>
+  <circle class="fil0" cx="926.05" cy="926.04" r="639.26"/>
+  <path class="fil0" d="M926.05 370.49c306.82,0 555.55,248.73 555.55,555.55 0,306.83 -248.73,555.56 -555.55,555.56 -306.83,0 -555.56,-248.73 -555.56,-555.56 0,-306.82 248.73,-555.55 555.56,-555.55z"/>
+  <g style="clip-path:url(#id0)">
+   <g id="_2219746527760">
+    <circle class="fil2 str1" cx="926.3" cy="925.9" r="555.55"/>
+    <circle class="fil3 str1" cx="926.3" cy="925.9" r="527.43"/>
+   </g>
+  </g>
+  <path class="fil4 str1" d="M926.05 370.49c306.82,0 555.55,248.73 555.55,555.55 0,306.83 -248.73,555.56 -555.55,555.56 -306.83,0 -555.56,-248.73 -555.56,-555.56 0,-306.82 248.73,-555.55 555.56,-555.55z"/>
+  <rect class="fil0 str0" x="354.95" y="796.03" width="1145.81" height="394.14"/>
+  <circle class="fil5" cx="926.05" cy="926.04" r="446.89"/>
+  <polygon class="fil6" points="1192.08,1192.09 926.04,926.05 660,1192.09 "/>
+  <polygon class="fil7" points="1192.08,660.01 926.04,926.05 660,660.01 "/>
+ </g>
+</svg>

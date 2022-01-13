@@ -1,0 +1,83 @@
+@use'../abstracts' as *;
+
+.timeline-container{
+  //  border:1px solid lightgray;
+    // *{
+    //   outline: 1px solid lightgray;
+    // }
+    width:100%;
+    height:100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    place-items:center;      
+    outline: 1px solid $clr-outline;
+    margin-right:0;
+    padding-top: 1em;
+    background-color: $clr-surface;
+    .splash {
+      height: 100%;
+      width: 100%;
+      outline: 1px solid;
+    }
+    .timeline {
+      outline: 1px solid $clr-outline;
+      display:grid;
+      grid-template-columns: 6.5em 3em minmax(70px, auto) 4em;
+      grid-template-rows: 1fr;
+      width: 100%;
+      padding-left: 3em;
+      padding-right: 1em;
+      
+
+      .infoclass{
+        font-family: $fnt-title;;
+        color: $clr-cool;
+        font-size: $rem-fonts1;
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: start;
+        padding-bottom: 10px;
+        grid-column: 3/5;
+      }
+            
+      .tl-date-rel{
+        display: grid;
+        justify-items: end;
+        
+        font-family: $fnt-time;
+        font-size: $rem-smallerfont;
+        color: $clr-fontTime;
+        .NoHrs {
+          color:hsl(224,21%,72%);
+        }
+      }
+      .tl-date{
+        display: flex;  
+        justify-content: flex-end;
+        place-items:center;   
+        font-family: $fnt-time;
+        font-size: $rem-smallerfont;
+        color: $clr-fontTime;
+      }
+      .tl-status{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        place-items:center;
+        height: 30px;
+        position:relative;
+      }
+      .tl-info {
+        font-family: $fnt-title;
+        color: black;
+        font-size: $rem-font;
+        display:flex;
+        justify-content: flex-left;
+        place-items:center;
+      
+      }
+    }
+
+  }
+  

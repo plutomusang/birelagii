@@ -1,0 +1,19 @@
+{
+    "DocumentTrackID": 0,
+    "DocTypeID": 1,
+    "DocType": "Letter of Authority",
+    "picIndex": 2,
+    "Subject": "",
+    "Office": "",
+    "ProjectCode": "",
+    "Amount": 0,
+    "Remarks": "",
+    "DateCreated": "",
+    "DateCompleted": "",
+    "isActed": false,
+    "ControlNumber": "",
+    "Recepient" : "",
+    "NoDays" : "",
+    "taxPayerName" : ""
+
+}

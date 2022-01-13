@@ -1,0 +1,241 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+:root {
+    --clr-coollight : hsl(184, 63%, 78%);
+    --clr-coollightdeep : hsl(184, 63%, 50%);
+    --clr-coollight90 : hsl(184, 63%, 90%);
+    --clr-coollight80 : hsl(184, 63%, 80%);
+    --clr-coollightHover : hsl(184, 63%, 85%);
+    --fnt: 'Roboto',  Arial;
+    --clr-input:#dddddd;
+    --clr-inputFont:hsl(0,0%,40%);
+    --clr-CircleDark:hsl(0,0%,45%);
+    --clr-CircleLight:hsl(0,0%,70%);
+    --clr-inputHover:#eeeeee ;
+
+} 
+*,
+* ::after,
+* ::before {
+    box-sizing: border-box;
+}
+
+.dynalist {
+    display: grid;
+    place-items: center;
+    border:1px solid none;
+    
+    
+    .item{
+        width:100%;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: .25em;
+        margin-top: .25em;
+    }
+    .toggleradd{
+        display: none;
+    }
+    .dynalink {
+        display: grid;
+        place-items: center;
+        grid-template-columns: auto 2.5em ;
+        /* border: 1px solid; */
+        position: relative;
+        
+        border: 1px solid none;
+        border-radius: 10px;
+
+
+        background-color:var(--clr-input); 
+        transition: all 0.2s;
+        font-family: var(--fnt);
+        color: var(--clr-inputFont);
+        width: 100%;
+    }
+
+    .dynalink-label {
+        display: grid;
+        position: relative;
+        grid-template-columns: auto 2.5em;
+        border:1px solid none;
+        height:100%;
+        border-radius: 10px;
+        background-color:var(--clr-input);
+        transition: all 0.2s;
+        padding-right: .1em;
+        width: 100%;
+    }
+
+    .dynalink-label:hover {
+        cursor: pointer;
+        /* background-color: var( --clr-inputHover);  */
+    }
+    .dynalink-label:hover > .dyna-input {
+        cursor: pointer;
+        /* background-color: var( --clr-inputHover);  */
+    }
+    .dyna-input {
+        padding: .32em;
+        border-radius: 10px;
+        background-color:var(--clr-input);
+        color: var(--clr-inputFont);
+        border: 2px solid transparent;
+        outline: none;
+        font-family: var(--fnt);
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.2s;
+        width: 100%;
+    }
+    .dyna-input:hover  { 
+        cursor:pointer;
+        background-color :#eeeeee;
+    }
+    .dyna-input:focus {
+        cursor: text;
+        color: #333333;
+        background-color:white;
+        border-color: darkgray;
+    }
+    .active {
+        background-color: var(--clr-inputHover);
+    }
+
+
+    .updown {
+    display: grid;
+    place-items: center;
+    }
+
+
+
+
+
+    .dynasvgIcon .dc1{
+        fill:var(--clr-CircleDark);
+    }
+    .dynasvgIcon .dc2{
+        fill:var(--clr-input);
+    }
+
+    .checkbox {
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    .toggler {
+        display: none;
+    }
+    .updown {
+        border: 1px solid transparent;
+    }
+    .toggler:checked ~ .dynalink-label > .updown > .dynasvgIcon {
+        transform:  rotate(180deg);
+        transition: all .3s ease .1s;
+    }
+    .toggler:checked ~ .list {
+        opacity: 1;
+        pointer-events: auto;
+        transition: all .1s ease-in-out .1s;
+    }
+    .toggler:checked ~ .dynalink-label > .list {
+        opacity: 1;
+        pointer-events: auto;
+        transition: all .1s ease-in-out .1s;
+    }
+    .dynasvgIcon {
+        width: 2em;
+        border:turquoise;
+
+        transform:  rotate(360deg);
+        transition: all .3s ease .1s;
+    }
+
+    .list {
+        position: absolute;
+        top: 2em;
+        box-shadow: 0 10px 25px rgba(0,0,0.5,0.2);
+        opacity: 0;
+        pointer-events: none;
+        width: 100%;
+        background-color:var(--clr-input);
+        border-radius: 6px;
+        overflow: auto;
+        list-style:none;
+        margin-top:1.5em;
+        padding:0;  
+        transition: all .1s ease-in-out .1s;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        z-index: 999;
+        font-family: var(--fnt);
+        font-weight: 500;
+        font-size: 16px;
+        height: 40vh;
+    }
+    .options {
+        display: grid;
+        place-items: start;
+        grid-template-columns: 1fr 2em;
+        width: 100%;
+        padding: .1em 0 .1em .5em ;
+        list-style: none;
+        overflow: auto;
+        position: relative;
+        box-sizing: border-box;
+    }
+    .options:hover {
+        background: var(--clr-inputHover);
+        cursor: pointer;
+    }
+
+
+
+    .cross{
+        z-index: 999;    
+        /* background-color: violet; */
+        width: 1.5em;
+        
+        display: none;
+    }
+
+    .toggleradd:checked + .dynalink > .cross {
+        display: block;
+        transform: scale(1.1);
+        margin-right: 5px;
+        transition: all .2s ease-in-out;
+    }
+    .svgCross {
+        width: 100%;
+    }
+    .svgCross .fil1 {
+        fill: orange;
+    }
+    .svgCross .fil0 {
+        fill: none;
+    }
+    .svgCross:hover > .fil1 {
+        fill: magenta;
+    }
+    .svgCross:hover {
+        cursor: pointer;
+    }
+
+
+    .dbuttons{
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1em 1em;
+    }
+    .dbtnedit {
+        width: .5em;
+        height: .5em;
+        fill: var(--clr-CircleLight);
+    }
+    .dsvgcrud:hover {
+        fill: orange;;
+    }
+
+}

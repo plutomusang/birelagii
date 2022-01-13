@@ -1,0 +1,17 @@
+{
+    "Header": "spGetOnProcess",
+    "spGetOnProcess": [
+        {
+            "DocTypeID": "1",
+            "ControlNumber": "AR-1",
+            "personName": "Neque Porro",
+            "NoDays": "2 Days"
+        },
+        {
+            "DocTypeID": "2",
+            "ControlNumber": "LR-1",
+            "personName": "Jack Enjil",
+            "NoDays": "2 Days"
+        }
+    ]
+}

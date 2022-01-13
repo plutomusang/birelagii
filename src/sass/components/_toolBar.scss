@@ -1,0 +1,105 @@
+@use'../abstracts' as *;
+
+.toolbar {
+    width: 100%;
+    background:hsl(184,62%,48%);
+    transform: translateY(7.6em);   
+    position:fixed;
+    z-index: 998;
+    height:3em;
+
+    display: grid;
+    place-items: center;
+
+    // *{
+    //     outline: 1px solid ;
+    // }
+    .tbContainer {
+        margin-top: 2px;
+        display: grid;
+        grid-template-columns: 22em auto;
+        align-content: center;
+        padding: .3em;
+        width: 100%;
+        .btntoolbarhidden {
+            place-self: center;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+          }
+        .btntoolbar {            
+            margin-top: 1px;
+            // border: 1px solid magenta;
+            width: 80px;
+            place-self: center;
+            align-self: center;
+            cursor: pointer;
+            background: hsl(184,62%,68%);
+            
+            padding: 4px;
+            border-radius: 99em;
+            font-size: 1rem;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            place-content: center;
+            div{
+                padding: 1px;
+            }
+            img {
+                width: .95em;
+                margin: 1px;
+            }
+          }
+        .btntoolbarhidden:hover .btntoolbar {
+            filter: brightness(1.05);
+          }
+        .searchbar {
+            font-size: 1rem;
+            display: flex;
+            place-content: flex-start;
+            place-items: center;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (min-width:800px) {
+    .toolbar {
+        // *{
+        //     outline: 1px solid;
+
+        // }        
+        display: grid;
+        place-items: center;
+        
+        // *{
+        //     outline : 1px solid; 
+        //    }
+        .tbContainer {
+            // margin-top: 2PX;
+            padding: 0;
+            width: 800px;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .toolbar {
+        // div{
+        //     outline: 1px solid;
+        // }
+        .tbContainer {
+            display: grid;
+            grid-template-columns: 1em;
+            width: 90%;
+            .btntoolbarhidden {
+                transform: translateX(35px);
+            }
+            
+        }
+    }
+}

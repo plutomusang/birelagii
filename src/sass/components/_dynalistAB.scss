@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap');
+
+$fnt-dyna:  'Urbanist', Arial;
+
+$rem-font:1rem;
+$rem-fonts1:.9rem;
+$rem-smallfont:.7rem;
+$rem-smallerfont:.6rem;
+
+:root {
+    --clr-dab-coollight : hsl(184, 63%, 78%);
+    --clr-dab-coollightdeep : hsl(184, 63%, 50%);
+    --clr-dab-coollight90 : hsl(184, 63%, 90%);
+    --clr-dab-coollight80 : hsl(184, 63%, 80%);
+    --clr-dab-coollightHover : hsl(184, 63%, 85%);
+    --clr-dab-input:hsl(182,63%,93%);
+    --clr-dab-inputFont:hsl(0,0%,0%);
+    --clr-dab-CircleDark:hsl(184,63%,48%);
+    --clr-dab-CircleLighter:hsl(184,63%,78%);
+    --clr-dab-CircleLight:hsl(0,0%,70%);
+    --clr-dab-inputHover:hsl(180,63%,97%) ;
+    --clr-dab-CircleHover:hsl(183,62%,38%) ;
+} 
+*,
+* ::after,
+* ::before {
+    box-sizing: border-box;
+}
+
+.dynalistAB {
+
+
+
+    
+    display: grid;
+    place-items: center;
+    border:1px solid none;
+    width: 100%;
+    // *{
+    //     outline: 1px solid;
+    // }
+    .item{
+        width:100%;
+        display: grid;
+        grid-template-columns: 2em auto;
+        place-items: center;
+
+        padding-bottom: .25em;
+        padding-top: .25em;
+        a{
+            width: 100%;
+
+            display: grid;
+            place-items: center;
+            justify-content: start;
+            padding-left: 5px;
+            height: 100%;
+        }
+        // *{
+        //     outline: 1px solid;
+        // }
+        img{
+            width: 2em;
+
+        }
+    }
+    .toggleradd{
+        display: none;
+    }
+    .dynalink {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 5em auto 2.5em ;
+        
+        /* border: 1px solid; */
+        position: relative;
+        
+        border: 1px solid none;
+        border-radius: 6px;
+
+
+        background-color:var(--clr-dab-input); 
+        transition: all 0.2s;
+        font-family: $fnt-dyna;
+        color: var(--clr-dab-inputFont);
+        width: 100%;
+        cursor: pointer;
+
+        .headerIcon {
+            width: 5em;
+        }
+        // img {
+        //     width: 4em;
+        // }
+        // *{
+        //     outline: 1px solid;
+        // }
+
+    }
+    .onShadow {
+        box-shadow: 0 10px 25px rgba(0,0,0.5,0.2);
+    }
+    .dynalink-label {
+        display: grid;
+        position: relative;
+        grid-template-columns: auto 2.5em;
+        border:1px solid none;
+        height:100%;
+        border-radius: 10px;
+        background-color:var(--clr-dab-input);
+        transition: all 0.2s;
+        padding-right: .1em;
+        width: 100%;
+        
+        // padding: .2em 1em;
+
+        &:hover {
+            cursor: pointer;
+        }
+        &:hover .dyna-input {
+            cursor: pointer;
+        }
+        .dyna-input {
+            padding: .32em;
+            border-radius: 10px;
+            background-color:var(--clr-dab-input);
+            color: var(--clr-dab-inputFont);
+            border: 2px solid transparent;
+            outline: none;
+            font-family: $fnt-dyna;
+            font-weight: bold;
+            font-size: 32px;
+            transition: all 0.2s;
+            width: 100%;
+            text-align: center;
+
+
+
+            &:hover  { 
+                cursor:pointer;
+                background-color :var(--clr-dab-inputHover);
+            }
+            &:focus {
+                cursor: text;
+                color: var(--clr-dab-inputFont);
+                background-color:white;
+                border-color: var(--clr-dab-CircleLighter);
+                text-align: left;
+                font-weight:300;
+                // font-size: 22px;
+            }
+        }
+
+
+    }
+
+
+    .alignTextLeft{
+        text-align: left;
+    }
+
+    .active {
+        background-color: var(--clr-dab-inputHover);
+    }
+
+
+    .updown {
+        display: grid;
+        place-items: center;
+        border: 1px solid transparent;
+    }
+
+
+
+    .dynasvgIcon {
+        width: 2em;
+        transform:  rotate(360deg);
+        transition: all .3s ease .1s;        
+        .dc1{
+            fill:var(--clr-dab-CircleDark);
+        }
+        .dc2{
+            fill:var(--clr-dab-input);
+        }        
+        &:hover .dc1{
+            fill:var(--clr-dab-CircleHover);
+        }
+
+    }
+
+
+
+
+    .checkbox {
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    .toggler {
+        display: none;
+    }
+
+    .toggler:checked ~ .dynalink-label > .updown > .dynasvgIcon {
+        transform:  rotate(180deg);
+        transition: all .3s ease .1s;
+    }
+    .toggler:checked ~ .list {
+        opacity: 1;
+        pointer-events: auto;
+        transition: all .1s ease-in-out .1s;
+    }
+    .toggler:checked ~ .dynalink-label > .list {
+        opacity: 1;
+        pointer-events: auto;
+        transition: all .1s ease-in-out .1s;
+    }
+
+    .list {
+        position: absolute;
+        top: 3.5em;
+        box-shadow: 0 10px 25px rgba(0,0,0.5,0.2);
+        opacity: 0;
+        pointer-events: none;
+        width: 100%;
+        background-color:var(--clr-dab-input);
+        border-radius: 6px;
+        overflow: auto;
+        list-style:none;
+        margin-top:1.5em;
+        padding:0;  
+        transition: all .1s ease-in-out .1s;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        z-index: 999;
+        font-family: $fnt-dyna;
+        font-weight: 500;
+        font-size: 16px;
+        max-height: 40vh;
+    }
+    .options {
+        display: grid;
+        place-items: start;
+        grid-template-columns: 1fr 2em;
+        width: 100%;
+        padding: .1em 0 .1em .5em ;
+        list-style: none;
+        overflow: auto;
+        position: relative;
+        box-sizing: border-box;
+    }
+    .options:hover {
+        background: var(--clr-dab-inputHover);
+        cursor: pointer;
+    }
+
+
+
+    .cross{
+        z-index: 999;    
+        /* background-color: violet; */
+        width: 1.5em;
+        
+        display: none;
+    }
+
+    .toggleradd:checked + .dynalink > .cross {
+        display: block;
+        transform: scale(1.1);
+        margin-right: 5px;
+        transition: all .2s ease-in-out;
+    }
+    .svgCross {
+        width: 100%;
+    }
+    .svgCross .fil1 {
+        fill: orange;
+    }
+    .svgCross .fil0 {
+        fill: none;
+    }
+    .svgCross:hover > .fil1 {
+        fill: magenta;
+    }
+    .svgCross:hover {
+        cursor: pointer;
+    }
+
+
+    .dbuttons{
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1em 1em;
+    }
+    .dbtnedit {
+        width: .5em;
+        height: .5em;
+        fill: var(--clr-dab-CircleLight);
+    }
+    .dsvgcrud:hover {
+        fill: orange;;
+    }
+
+}

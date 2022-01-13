@@ -1,0 +1,275 @@
+@use'../abstracts' as *;
+
+/* COLORS
+========================================== */
+
+$gray: #3e4146;
+$blue: #689bf6;
+$yellow: #ffd84c;
+$orange: #f66867;
+$purple: #8e6ac1;
+$white: #ffffff;
+$black: #000000;
+
+/* MIXINS
+========================================== */
+
+@mixin animation($animation) {
+  -webkit-animation: #{$animation};
+     -moz-animation: #{$animation};
+       -o-animation: #{$animation};
+          animation: #{$animation};
+}
+
+@mixin animation-delay($animation-delay) {
+  -webkit-transition-delay: #{$animation-delay};
+     -moz-transition-delay: #{$animation-delay};
+       -o-transition-delay: #{$animation-delay};
+          transition-delay: #{$animation-delay};
+}
+
+@mixin keyframes($keyframes) {
+  @-webkit-keyframes #{$keyframes} { @content; }
+     @-moz-keyframes #{$keyframes} { @content; }
+       @-o-keyframes #{$keyframes} { @content; }
+          @keyframes #{$keyframes} { @content; }
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+      -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: #{$transition};
+     -moz-transition: #{$transition};
+       -o-transition: #{$transition};
+          transition: #{$transition};
+}
+
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: #{$transition-delay};
+     -moz-transition-delay: #{$transition-delay};
+       -o-transition-delay: #{$transition-delay};
+          transition-delay: #{$transition-delay};
+}
+
+/* KEYFRAMES
+========================================== */
+
+@include keyframes(float) {
+  0% {
+		transform: translatey(0px);
+    transform: translatex(0px);
+	}
+	50% {
+		transform: translatey(-30px);
+    transform: translatex(20px);
+	}
+	100% {
+		transform: translatey(0px);
+    transform: translatex(0px);
+	}
+}
+
+
+/* BUTTON
+========================================== */
+
+.popbutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    
+    font-family: inherit;
+    background-color: $white;
+    border: 0;
+    padding: 15px 25px;
+    color: $black;
+    text-transform: uppercase;
+    font-size: 21px;
+    letter-spacing: 1px;
+    width: 200px;
+    overflow: hidden;
+    outline: 0;
+    @include transition(all .4s);
+    visibility: visible;
+    opacity: 1;
+    font-weight: bold;
+    box-shadow: 0px 6px 30px rgba(0,0,0,0.6);
+    
+    &:hover {
+      cursor: pointer;
+      background-color: $purple;
+      color: $white;
+    }
+    
+    span {
+      
+      opacity: 1;
+    }
+  }
+  
+  &.clicked {
+    button {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+/* POP-UP
+========================================== */
+
+
+.pop-up {
+  
+  @include transform(translate(-50%, -50%) scale(0.9));
+  @include transition(all .3s);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  overflow-y: auto; 
+  visibility: hidden;
+  box-shadow: 0px 6px 30px rgba(0,0,0,0.4);
+  opacity: 0;
+  
+  z-index: 10;
+  background-color: $white;
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid none;
+  border-radius: 10px;
+//   transform: translateY(15em);    
+//   height: calc(100% - 15em);
+button{
+    margin: 5px;
+}
+
+.popbut {
+  margin: 5px;
+  // width: 210px;
+  place-self: center;
+  background: transparent;
+  border: 1px solid transparent;
+  // border-radius: 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 2em;
+  border-radius: 99em;
+  padding: 1em 5em 1em 5.5em;
+  background: $clr-warm;
+  cursor: pointer;
+  transition: 0.2s ease;
+  color: $clr-cooldark;
+  margin-bottom: 2em;
+  &:hover {
+      filter: brightness(1.05);
+  }
+  &:active {
+      filter: brightness(1);
+      border-color: lightgray;
+  }
+
+}
+//   border: 1px solid;
+//   *{
+//       outline:1px solid;
+//   }
+
+  @media (min-width: 768px) {
+    width: calc(100% - 70px);
+    height: 300px;
+    max-width: 400px;
+  }
+  
+  .content {
+    width: 100%;
+    max-width: 900px;
+    // overflow: hidden;
+    text-align: center;
+    position: relative;
+    // min-height: 100%;
+    transform: translateY(190px);
+    
+    @media (min-width: 768px) {
+      min-height: inherit;
+      transform: translateY(0);
+    }
+    
+    
+    .container {
+        outline: 1px solid;
+        padding: 100px 20px 140px;
+        
+ 
+        @media (min-width: 568px) {
+            padding: 50px 20px 80px;
+        }
+        
+        @media (min-width: 768px) {
+            padding: 70px 0px 90px;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+    }
+    
+    .close {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1.1rem;
+      letter-spacing: 0.05rem;
+      color: $gray;
+      @include transition(all .4s);
+      
+      &:hover {
+        cursor: pointer;
+        color: $orange;
+      }
+    }
+    
+    
+    .title {
+      h1 {
+        text-align: center;
+        color: $orange;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 2.8rem; //1.4
+        color:$clr-alarm;
+        letter-spacing: 0.05rem;
+      }
+    }
+
+
+  }
+  
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    @include transform(translate(-50%, -50%) scale(1));
+    
+    img {
+      opacity: 1;
+      @include transition(1s);
+      @include transition-delay(.3s);
+      @include transform(translateX(0px));
+    }
+  }
+}

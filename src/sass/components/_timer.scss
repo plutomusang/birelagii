@@ -1,0 +1,40 @@
+@use'../abstracts' as *;
+
+.timerbutton {
+    position:relative;
+  }
+  
+  .timerobj{
+    margin-top: 20px;
+    width: 100%;
+    display:grid;
+    place-items:center;
+    justify-items:left;
+    grid-template-columns: minmax(3em, auto) 2fr  ;
+    grid-template-rows: 1fr;
+    font-family: $fnt-button;
+    font-size:$rem-fonts1;
+    color: darkgray;
+    // outline: 1px solid;
+    // *{
+    //   outline: 1px solid;
+    // }
+    .timernum{
+      width: 100%;
+      margin-right: 5px;
+    }
+    .toggle {
+      padding-top: 2px;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+    }
+    
+    .play-btn {
+        grid-column: 2/3;
+        grid-row: 1/1;
+        z-index: 999;
+    }
+    
+  }
+

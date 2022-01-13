@@ -1,0 +1,24 @@
+@use 'base/base';
+@use 'components/buttons';
+@use 'components/circle';
+@use 'components/infoclass';
+@use 'components/verticalLine';
+@use 'components/timelinetl';
+@use 'components/optionab';
+@use 'components/timer';
+@use 'components/svgicon';
+@use 'components/header';
+@use 'components/toolBar';
+@use 'components/timelineHeader';
+@use 'components/content';
+@use 'components/docView';
+@use 'components/footer';
+@use 'components/inputbox';
+@use 'components/createDoc';
+@use 'components/createTimeline';
+@use 'components/login';
+@use 'components/popup';
+@use 'components/popupers';
+@use 'components/dynalist';
+@use 'components/dynalistAB';
+//sass --watch src/sass:dist/css

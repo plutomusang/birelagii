@@ -1,0 +1,42 @@
+{
+    "Header": "spDocView",
+    "Set1": [
+        {
+            "DocumentTrackID": 1,
+            "DocTypeID": 1,
+            "ControlNumber": "",
+            "personName": "",
+            "NoDays": "",
+            "DocType": "",
+            "Subject": "",
+            "picIndex": 0,
+            "taxPayerName" : ""            
+        }
+    ],
+    "Set2": [
+        {
+            "DocumentTrackID": 1,
+            "DocTypeID": 1,
+            "ControlNumber": "",
+            "Office": "",
+            "NoDays": "",
+            "DocType": "",
+            "Subject": "",
+            "picIndex": 0,
+            "taxPayerName" : ""                        
+        }
+    ],
+    "Set3": [
+        {
+            "DocumentTrackID": 1,
+            "DocTypeID": 1,
+            "ControlNumber": "",
+            "Office": "",
+            "NoDays": "",
+            "DocType": "",
+            "Subject": "",
+            "picIndex": 0,
+            "taxPayerName" : ""                        
+        }
+    ]
+}

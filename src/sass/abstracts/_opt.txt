@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+$clr-alarm:rgb(232,48,213);
+$clr-cool:hsl(184, 63%, 48%);
+
+$fnt-button: 'Cabin',  Arial;
+
+
+$clr-selected: #ff960d;
+$clr-hover: #ffdf0d ;
+$clr-font: #AAAAAA;
+
+$rem-font:.7em;
+$px-check: 14px;
+$px-border: calc(var($px-check) *.10);
+$px-innercircle: calc(var($px-check) *.4);
+
+$clr-outline: none;
+$fnt-check: 'Lato', sans-serif;

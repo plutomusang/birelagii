@@ -1,0 +1,19 @@
+@use'../abstracts' as *;
+
+.svgicon{
+    width: 1em;
+    height: 1em;
+    fill: lightgray;
+    transition: 0.2s ease;
+    cursor:pointer;
+  }
+  .svgicon:hover{
+    fill: orange;
+  }
+  .svgicon:active{
+    fill: red;
+  }
+  
+  .lastline {
+    border-bottom: 1px solid lightgray;
+  }

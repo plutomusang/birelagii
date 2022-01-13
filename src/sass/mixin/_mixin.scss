@@ -1,0 +1,26 @@
+@use'../abstracts' as *;
+
+@mixin after($content: '', $pos: absolute) {
+    position:relative;
+    &::after {
+        content:$content;
+        position:$pos;
+        @content;
+    }
+
+}
+@mixin hover-lift () {
+    transition: transform 350ms ease-in-out;
+    box-shadow: 0 .25em .5em rgba(black, .2);
+
+    @include after( ) {
+        box-shadow: 0 0 1.25em 0 rgba(black, .4);
+        transition: transform 350ms ease-in-out;
+        opacity: 0;
+    }
+
+    &:hover,
+    &:focus {
+        transform:scale (1.05);
+    }
+}

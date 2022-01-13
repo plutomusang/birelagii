@@ -1,0 +1,11 @@
+$em-vliner: .15em;
+$em-circle: 1.2em;
+$em-circle-cross-diameter: 2.3em;
+$em-thickness: calc($em-circle-cross-diameter / 10);  
+$rem-font:1rem;
+$rem-fonts1:.9rem;
+$rem-smallfont:.7rem;
+$rem-smallerfont:.6rem;
+$px-check: 14px;
+$px-border: calc(var($px-check) *.10);
+$px-innercircle: calc(var($px-check) *.4);

@@ -1,0 +1,52 @@
+@use'../abstracts' as *;
+
+.buttons{
+    display:flex;
+    justify-content: flex-end;
+    place-items:center;
+    font-family: $fnt-button;
+    color: $clr-cool;
+    font-size: .7rem;
+  }
+  .button-acted {
+    width: 200px;
+    margin: 10px;
+    place-self: center;
+    cursor: pointer;
+    background: $clr-warm;
+    border: 0px solid;
+    padding: 5px;
+    color: $clr-cool;
+    border-radius: 99em;
+    transition: 0.2s ease;
+    
+  }
+  .button-hidden {
+    width: 210px;
+    place-self: center;
+    margin: 15px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    
+  }
+  
+  .button-hidden:hover .button-acted {
+    filter: brightness(1.05);
+  }
+  
+  .button-hidden:active .button-acted {
+    filter: brightness(1);
+  }
+  
+  
+  .btnedit {
+    height: 1em;
+    width: 1.5em;
+    justify-self: end;
+    display:grid;
+    place-items:center;
+  }  

@@ -1,0 +1,38 @@
+@use'../abstracts' as *;
+
+.inputWithIcon {
+    position: relative;
+
+    input[type="text"] {
+        width: 100%;
+        border: 2px solid $clr-cooldark;
+        border-radius: 10px;        
+        outline: none;
+        padding: 5px;
+        box-sizing: border-box;
+        transition: 0.3s;
+        padding-left: 30px;
+        font-size: $rem-font;
+        margin-top: auto;
+        &:focus {
+            border-color: $clr-coollight;
+            box-shadow: 0 0 8px 0 $clr-coollight;
+
+        }
+        &:focus + .svgsearch {
+            fill: $clr-cool;
+        }
+    }
+      
+      
+     .svgsearch {
+        position: absolute;
+        left: 0;
+        top: -3px;
+        padding: 9px 8px;
+        fill: #aaa;
+        width: 2.25em;
+        transition: 0.3s;
+      }
+
+}

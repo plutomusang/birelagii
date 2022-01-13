@@ -1,0 +1,50 @@
+{
+    "Header": "spGetTimeline",
+    "Set1": [
+        {
+            "DocumentTrackID": 0,
+            "DocTypeID": 0,
+            "DocType": "Track New Document",
+            "picIndex": 0,
+            "Subject": "",
+            "Office": "",
+            "ProjectCode": "",
+            "Amount": 0,
+            "Remarks": "",
+            "DateCreated": "",
+            "DateCompleted": "",
+            "isActed": false,
+            "ControlNumber": "",
+            "Recepient" : "",
+            "NoDays" : "",
+            "taxPayerName": ""
+        }
+    ],
+    "Set2": [
+        {
+            "IndexNumber": 0,
+            "TimelineID": 2,
+            "documentTrackId": 1,
+            "personName": "",
+            "description": "",
+            "timeRecieved": "",
+            "timeReleased": "",
+            "NoHrs": 0,
+            "documentStatus": true,
+            "isLastItem": false,
+            "delay": 0,
+            "datePaused": 0,
+            "paused": false,
+            "running": false,
+            "dateStart": 0,
+            "timeRecievedCaption": "",
+            "timeReleasedCaption": "",
+            "NoHrsCaption": "",
+            "runningDelay": 0,
+            "totalTime": 0,
+            "consumedTime": 0,   
+            "NoDaysCaption": ""
+                     
+        }
+    ]
+}
