@@ -79,12 +79,12 @@ body{
             .brmsTitle {
                 width: 100px;
                 position: relative;
-
+                height: 5.1em;
                 img {
                     position: absolute;
-                    top: 50%;
-                    width: 50%;
-                    transform: translate(-270%, -50%);                
+                    // top: 50%;
+                    width: 6em;
+                    transform: translate(-7em, 0);                
                 }
                 h1 {
                   transform: translateX(-.6em);
@@ -94,7 +94,7 @@ body{
                     top:.5rem;
                     width:350px;
                     color:hsl(0,0%,30%);
-                    transform: translate(-55px, 85px);      
+                    transform: translate(-11em, 85px);      
                     font-size: .7rem;        
                     margin-left: .8em;  
                     .subtext {
@@ -186,8 +186,8 @@ body{
             .brmsTitle {
                place-self:  normal start;
                img{
-                 width: 90%;
-                 transform: translate(-200%, -50%);  
+                //  width: 90%;
+                 transform: translate(-7em, 0);  
                }
             }
           }          

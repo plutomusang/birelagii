@@ -5,6 +5,8 @@ import logo from '../svg/BudgetLogo.svg';
 import { useNavigate } from "react-router-dom";
 import API from "../typescript/class_api";
 import logger from "../config/logger";
+import OneSignal from 'react-onesignal';
+
 
 export interface DefLoginSession {
     Header: string;
@@ -50,6 +52,7 @@ export const Login: React.FC<ILogin> =(props) => {
             if (data.Set1[0].LoginStatus ==='Success') {
                 // let navigate = useNavigate();
                 // navigate("workbench", { replace: true });
+                OneSignal.sendTag('username', un?.toLowerCase());
                 props.onlogin();
             }
           })

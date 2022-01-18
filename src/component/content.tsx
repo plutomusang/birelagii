@@ -6,7 +6,7 @@ import TimeLineAC from "./timelineAC";
 import TimelineHeader from "./timelineHeader";
 import NavigationContext from '../typescript/context_navigation';
 import CreateTimeline from "./createTimeline";
-import logo from '../svg/BudgetLogo.svg';
+import logo from '../svg/logo.svg';
 
 import {IDocViewEvents, DEF_DOCVIEWEVENTS} from "../typescript/interface_DocView";
 export const ContentAB: React.FC =() => {

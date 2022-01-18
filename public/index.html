@@ -24,7 +24,7 @@
     <title>eLAgii</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -36,5 +36,22 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+       var OneSignal = window.OneSignal || [];
+        var initConfig = {
+            appId: "72dd7198-a72b-408f-a59f-3c9ee91c5e84",
+            notifyButton: {
+                enable: true
+            },
+        };
+        OneSignal.push(function () {
+            OneSignal.SERVICE_WORKER_PARAM = { scope: '/push/onesignal/' };
+            OneSignal.SERVICE_WORKER_PATH = 'push/onesignal/OneSignalSDKWorker.js'
+            OneSignal.SERVICE_WORKER_UPDATER_PATH = 'push/onesignal/OneSignalSDKUpdaterWorker.js'
+            OneSignal.init(initConfig);
+        });
+    </script>      
+    <noscript>You need to enable JavaScript to run this app.</noscript>
   </body>
 </html>

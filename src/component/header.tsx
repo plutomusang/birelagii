@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import logo from '../svg/logo.svg';
+import logo from '../svg/elagi-logo.png';
 import documentType from '../svg/documentType2.svg';
 import recepient from '../svg/recepient2.svg';
 import report from '../svg/report2.svg';
@@ -87,7 +87,6 @@ export const HeaderAB: React.FC<IHeaderProps> =(props) => {
                 <div className="logo">
                     <div className="brmsLogoContainer">
                         <div className="brmsTitle"> 
-                            <h1> eLAgii </h1>
                             <img  src={logo} />
                             <div className="subtitle"> 
                                 <span> E</span>
