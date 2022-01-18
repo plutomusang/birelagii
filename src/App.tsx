@@ -65,13 +65,24 @@ function App() {
   function onLogIn (){
     setSession(true);
   }
+  // const DisplayNotificaiton=()=>{
 
+  //     if (Notification.permission == 'granted') {
+  //       navigator.serviceWorker.getRegistration().then(function(reg: any) {
+  //         reg.showNotification('Hello world!');
+  //       });
+  //     }
+  // }
   useEffect(()=>{    
     // let navigate = useNavigate();
     // navigate("login");
+    // OneSignal.init({
+    //   appId: "72dd7198-a72b-408f-a59f-3c9ee91c5e84"
+    // });    
   },[]);
   return (    
     <div className="App">
+        {/* <button onClick={DisplayNotificaiton}>Test PushNotification 22</button> */}
         <HeaderAB logout={onLogout} onSession={session} onWorkBench={onWorkbenchOpen}/>
         <IsLogin onlogin={onLogIn}/>
         {/* <Outlet/> */}
